@@ -37,16 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     #RestFramework
     'rest_framework',
 
     # Apps
-    'accounts',
-    'appointments',
-    'finance',
-    'registrations',
-    'stores',
+    'accounts', # User accounts, Staff Information(Doctors, nurses, admins etc) & Patients Profile
+    'appointments', # Patient and Doctor Appointments
+    'finance', # Finance Management Department
+    'registrations', # Registration Department for record keeping
+    'stores', # Stores & Purchasing departments (Medicine)
 
 ]
 
@@ -109,6 +109,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AUTH_USER_MODEL = "accounts.User"
 
 
 # Internationalization
