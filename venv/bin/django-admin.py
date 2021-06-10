@@ -1,4 +1,4 @@
-#!/home/sean/Documents/projects/hospitaldatabase/venv/bin/python
+#!/home/kingzozo/DevProjects/Health/HospitalManagementSystem/PatientManagement/venv/bin/python
 from django.core import management
 
 if __name__ == "__main__":

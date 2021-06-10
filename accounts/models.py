@@ -40,7 +40,21 @@ class CustomUserManager(BaseUserManager):
 
 
 class User(AbstractUser):
-    username = None
+    ACCOUNTANT = 1
+    ADMIN = 2
+    DOCTOR = 3
+    NURSE = 4
+    STORES_ADMIN = 5
+    
+
+    ROLE_CHOICES = (
+        (ACCOUNTANT, 'Accountant'),
+        (ADMIN, 'Admin'),
+        (DOCTOR, 'Doctor'),
+        (NURSE, 'Nurse'),
+        (STORES_ADMIN,'Stores_Admin'),) 
+    
+    role = models.PositiveIntegerField(choices=ROLE_CHOICES, blank=True, null=True)
     email = models.EmailField(unique=True)
     title = models.CharField(max_length=10, verbose_name='Title',
                              choices=(('dr', 'Dr.'), ('prof', 'Prof.'), ('mr', 'Mr.'), ('mrs', 'Mrs.'),

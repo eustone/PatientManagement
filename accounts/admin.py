@@ -6,5 +6,5 @@ from .models import User
 # Register your models here.
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ['email', 'date_of_birth', 'gender',
+    list_display = ['role','email', 'date_of_birth', 'gender',
                     'city', 'country']

@@ -2,6 +2,9 @@ from rest_framework import serializers
 from .models import PatientRecord
 
 class PatientRecordSerializer(serializers.Serializer):
+
+    """The Patient Record Serializer object """
+    
     pk           = serializers.IntegerField(read_only=True)
     patient_id = serializers.CharField()
     patient_reference_number  = serializers.CharField() 
